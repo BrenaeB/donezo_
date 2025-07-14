@@ -2,6 +2,8 @@ import express from "express";
 const router = express.Router();
 import prisma from "../db/index.js";
 
+
+
 router.get('/', async (req, res) => {
     // Gets all the todos from the database
     const todos = await prisma.todo.findMany();
